@@ -118,7 +118,7 @@ iframe {
   display: block;
   width: 100%;
   min-width: 320px;         /* 👈 smallest mobile width */
-  height: 3280px;
+  height: 460px;
   border: none;
 }
 .vote-header h2 {
@@ -142,4 +142,94 @@ iframe {
   margin-top: 25px;
   font-size: 0.8rem;
   opacity: 0.6;
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.0);
+  }
+}
+
+/* ---------- ANIMATION CLASSES ---------- */
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 1.4s ease forwards;
+}
+
+.fade-in-delay-3 {
+  animation: fadeIn 1.6s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+.slide-down {
+  animation: slideDown 1s ease forwards;
+}
+
+.grow-line {
+  animation: growLine 1.2s ease forwards;
+}
+
+.pulse {
+  animation: pulseGlow 2.5s infinite;
 }
